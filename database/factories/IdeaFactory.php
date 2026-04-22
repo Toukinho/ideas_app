@@ -21,7 +21,7 @@ class IdeaFactory extends Factory
         return [
             'title' => $this->faker->sentence(),
             'description' => $this->faker->paragraph(),
-            'user_id' => User::factory(),
+            'user_id' => 1,
         ];
     }
 }
