@@ -31,7 +31,11 @@
         @endguest
 
         @auth
-            <a href="/logout" class="btn btn-secondary">logout</a>
+            <form method="POST" action="/logout">
+                @method('DELETE')
+                @csrf
+                <button type="submit" class="btn btn-secondary">Logout</button>
+            </form>
         @endauth
     </div>
 </div>
