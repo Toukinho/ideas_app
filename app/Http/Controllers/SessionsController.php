@@ -20,7 +20,7 @@ class SessionsController extends Controller
         ]);
 
         if(!Auth::attempt($attributes)){
-            return back()->withErrors(['email' => 'We were unable to authenticate using the provided credencials.',])->withInput();
+            return back()->withErrors(['email' => 'We were unable to authenticate using the provided credentials.',])->withInput();
         }
 
         $request->session()->regenerate();
