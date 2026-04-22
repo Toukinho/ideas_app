@@ -8,12 +8,11 @@ use App\Models\Idea;
 
 class IdeaController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //
+        $ideas = Idea::with('user')->latest()->get();
+
+        return view('idea.index', ['ideas' => $ideas]);
     }
 
     /**
