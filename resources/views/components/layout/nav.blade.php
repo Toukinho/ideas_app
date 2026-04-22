@@ -9,18 +9,16 @@
             </div>
             @auth
                 <ul tabindex="-1" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                    <li><a>My Ideas</a></li>
-                    <li><a>Test</a></li>
+                    <li><a href="ideas">My Ideas</a></li>
                 </ul>
             @endauth
         </div>
-        <a class="btn btn-ghost text-xl">Idea</a>
+        <a href="/" class="bg-secondary btn btn-ghost text-xl">Idea</a>
     </div>
     <div class="navbar-center hidden lg:flex">
         @auth
             <ul class="menu menu-horizontal px-1">
-                <li><a>My ideas</a></li>
-                <li><a>test</a></li>
+                <li><a class="bg-secondary" href="ideas">My ideas</a></li>
             </ul>
         @endauth
     </div>
