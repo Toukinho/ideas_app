@@ -7,7 +7,7 @@
             @error('email')
                 <p class="text-error text-sm">{{ $message }}</p>
             @enderror
-            <button type="submit" class="btn btn-neutral mt-4">Login</button>
+            <x-form.button type="submit">Login</x-form.button>
         </x-form>
     </form>
 </x-layout>
