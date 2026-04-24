@@ -4,6 +4,7 @@ namespace App\Policies;
 
 use App\Models\Idea;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class IdeaPolicy
 {
@@ -23,12 +24,9 @@ class IdeaPolicy
         return false;
     }
 
-    /**
-     * Determine whether the user can create models.
-     */
     public function create(User $user): bool
     {
-        return false;
+        return $user !== null; 
     }
 
     /**

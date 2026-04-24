@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Models\Idea;
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -12,7 +13,7 @@ class StoreIdeaRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return $this->user()->can('create', Idea::class);
     }
 
     /**
@@ -23,7 +24,8 @@ class StoreIdeaRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'title' => ['required', 'string', 'max:125'],
+            'description' => ['required', 'max:600']
         ];
     }
 }
