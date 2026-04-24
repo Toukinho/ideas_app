@@ -18,7 +18,7 @@
     </main>
 
     @session('success')
-        <div class="bg-primary px-4 py-3 absolute bottom-4 right-4 rounded-lg">{{ $value }}</div>
+        <div class="bg-secondary font- px-4 py-3 absolute bottom-4 right-4 rounded-lg">{{ $value }}</div>
     @endsession
 
 </body>
